@@ -1,0 +1,5 @@
+{
+  "studentId": "demo-student-001",
+  "semester": "Fall 2025",
+  "classes": ["ENGR110", "MATH251", "CSCI101"]
+}

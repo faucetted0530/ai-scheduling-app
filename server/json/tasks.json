@@ -1,0 +1,235 @@
+[
+  {
+    "userId": "demo-user-001",
+    "courseId": "ENGR110",
+    "semester": "Fall 2025",
+    "title": "Design Constraints Worksheet",
+    "type": "classwork",
+    "description": "Identify constraints for the semester project",
+    "dueDate": "2025-09-03T11:15:00.000Z",
+    "status": "todo",
+    "priority": "low"
+  },
+  {
+    "userId": "demo-user-001",
+    "courseId": "ENGR110",
+    "semester": "Fall 2025",
+    "title": "Project Proposal",
+    "type": "assessment",
+    "description": "Formal proposal for engineering design project",
+    "dueDate": "2025-09-22T23:59:00.000Z",
+    "status": "todo",
+    "priority": "high"
+  },
+
+  {
+    "userId": "demo-user-001",
+    "courseId": "MATH251",
+    "semester": "Fall 2025",
+    "title": "Homework 1 – Logic",
+    "type": "homework",
+    "description": "Truth tables and logical equivalence",
+    "dueDate": "2025-09-05T23:59:00.000Z",
+    "status": "todo",
+    "priority": "medium"
+  },
+  {
+    "userId": "demo-user-001",
+    "courseId": "MATH251",
+    "semester": "Fall 2025",
+    "title": "Quiz 1 – Proofs",
+    "type": "assessment",
+    "description": "Direct and indirect proofs",
+    "dueDate": "2025-09-18T13:00:00.000Z",
+    "status": "todo",
+    "priority": "high"
+  },
+
+  {
+    "userId": "demo-user-001",
+    "courseId": "CSCI101",
+    "semester": "Fall 2025",
+    "title": "Homework 1 – Variables",
+    "type": "homework",
+    "description": "Basic input/output and variables",
+    "dueDate": "2025-09-04T23:59:00.000Z",
+    "status": "todo",
+    "priority": "medium"
+  },
+  {
+    "userId": "demo-user-001",
+    "courseId": "CSCI101",
+    "semester": "Fall 2025",
+    "title": "Midterm Exam",
+    "type": "assessment",
+    "description": "Programming fundamentals and conditionals",
+    "dueDate": "2025-10-13T09:00:00.000Z",
+    "status": "todo",
+    "priority": "high"
+  },
+
+  {
+    "userId": "demo-user-001",
+    "courseId": "PSYC110",
+    "semester": "Fall 2025",
+    "title": "Chapter 1 Reflection",
+    "type": "classwork",
+    "description": "Short reflection on psychological perspectives",
+    "dueDate": "2025-09-09T23:59:00.000Z",
+    "status": "todo",
+    "priority": "low"
+  },
+  {
+    "userId": "demo-user-001",
+    "courseId": "PSYC110",
+    "semester": "Fall 2025",
+    "title": "Exam 1",
+    "type": "assessment",
+    "description": "Biological bases of behavior",
+    "dueDate": "2025-10-07T14:30:00.000Z",
+    "status": "todo",
+    "priority": "high"
+  },
+
+  {
+    "userId": "demo-user-001",
+    "courseId": "STAT200",
+    "semester": "Fall 2025",
+    "title": "Homework 2 – Descriptive Stats",
+    "type": "homework",
+    "description": "Mean, median, standard deviation",
+    "dueDate": "2025-09-10T23:59:00.000Z",
+    "status": "todo",
+    "priority": "medium"
+  },
+  {
+    "userId": "demo-user-001",
+    "courseId": "STAT200",
+    "semester": "Fall 2025",
+    "title": "Quiz 1 – Data Visualization",
+    "type": "assessment",
+    "description": "Histograms and boxplots",
+    "dueDate": "2025-09-24T11:00:00.000Z",
+    "status": "todo",
+    "priority": "high"
+  },
+
+  {
+    "userId": "demo-user-001",
+    "courseId": "PHYS121",
+    "semester": "Winter 2026",
+    "title": "Kinematics Problem Set",
+    "type": "homework",
+    "description": "Motion in one dimension",
+    "dueDate": "2026-01-19T23:59:00.000Z",
+    "status": "todo",
+    "priority": "medium"
+  },
+  {
+    "userId": "demo-user-001",
+    "courseId": "PHYS121",
+    "semester": "Winter 2026",
+    "title": "Exam 1 – Newton's Laws",
+    "type": "assessment",
+    "description": "Forces and motion",
+    "dueDate": "2026-02-09T15:00:00.000Z",
+    "status": "todo",
+    "priority": "high"
+  },
+
+  {
+    "userId": "demo-user-001",
+    "courseId": "ENGL101",
+    "semester": "Winter 2026",
+    "title": "Essay 1 – Narrative",
+    "type": "assessment",
+    "description": "2–3 page personal narrative",
+    "dueDate": "2026-01-28T23:59:00.000Z",
+    "status": "todo",
+    "priority": "high"
+  },
+
+  {
+    "userId": "demo-user-001",
+    "courseId": "CHEM101",
+    "semester": "Winter 2026",
+    "title": "Lab Report 1",
+    "type": "homework",
+    "description": "Measurement and uncertainty",
+    "dueDate": "2026-01-22T23:59:00.000Z",
+    "status": "todo",
+    "priority": "medium"
+  },
+
+  {
+    "userId": "demo-user-001",
+    "courseId": "ECON101",
+    "semester": "Winter 2026",
+    "title": "Supply & Demand Homework",
+    "type": "homework",
+    "description": "Market equilibrium problems",
+    "dueDate": "2026-02-03T23:59:00.000Z",
+    "status": "todo",
+    "priority": "medium"
+  },
+
+  {
+    "userId": "demo-user-001",
+    "courseId": "BIO150",
+    "semester": "Spring 2026",
+    "title": "Cell Structure Worksheet",
+    "type": "classwork",
+    "description": "Label and explain organelles",
+    "dueDate": "2026-03-03T23:59:00.000Z",
+    "status": "todo",
+    "priority": "low"
+  },
+
+  {
+    "userId": "demo-user-001",
+    "courseId": "HIST205",
+    "semester": "Spring 2026",
+    "title": "Civilizations Timeline Project",
+    "type": "assessment",
+    "description": "Major world civilizations analysis",
+    "dueDate": "2026-04-02T11:30:00.000Z",
+    "status": "todo",
+    "priority": "high"
+  },
+
+  {
+    "userId": "demo-user-001",
+    "courseId": "ART105",
+    "semester": "Spring 2026",
+    "title": "Still Life Sketch",
+    "type": "classwork",
+    "description": "Charcoal drawing of still life",
+    "dueDate": "2026-03-13T15:30:00.000Z",
+    "status": "todo",
+    "priority": "low"
+  },
+
+  {
+    "userId": "demo-user-001",
+    "courseId": "MUSC120",
+    "semester": "Spring 2026",
+    "title": "Concert Reflection",
+    "type": "classwork",
+    "description": "Live concert analysis paper",
+    "dueDate": "2026-03-26T23:59:00.000Z",
+    "status": "todo",
+    "priority": "medium"
+  },
+
+  {
+    "userId": "demo-user-001",
+    "courseId": "SOCI210",
+    "semester": "Spring 2026",
+    "title": "Social Institutions Essay",
+    "type": "assessment",
+    "description": "Modern social structures analysis",
+    "dueDate": "2026-04-09T11:30:00.000Z",
+    "status": "todo",
+    "priority": "high"
+  }
+]

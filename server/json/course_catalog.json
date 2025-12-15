@@ -1,0 +1,142 @@
+[
+  {
+    "id": "ENGR110",
+    "name": "Introduction to Engineering Design",
+    "professor": "Dr. Elaine Bradford",
+    "location": "ELC Room 204",
+    "days": ["Mon", "Wed"],
+    "start": "10:00 AM",
+    "end": "11:15 AM",
+    "semester": "Fall 2025"
+  },
+  {
+    "id": "MATH251",
+    "name": "Discrete Mathematics",
+    "professor": "Prof. Samuel Turner",
+    "location": "CNSMN Room 118",
+    "days": ["Tue", "Thu"],
+    "start": "1:00 PM",
+    "end": "2:15 PM",
+    "semester": "Fall 2025"
+  },
+  {
+    "id": "CSCI101",
+    "name": "Introduction to Computer Science",
+    "professor": "Dr. Lisa Grant",
+    "location": "CNSMN Room 201",
+    "days": ["Mon", "Wed", "Fri"],
+    "start": "9:00 AM",
+    "end": "9:50 AM",
+    "semester": "Fall 2025"
+  },
+  {
+    "id": "PSYC110",
+    "name": "General Psychology",
+    "professor": "Dr. Henry Collins",
+    "location": "Humanities 104",
+    "days": ["Tue"],
+    "start": "2:30 PM",
+    "end": "5:00 PM",
+    "semester": "Fall 2025"
+  },
+  {
+    "id": "STAT200",
+    "name": "Introduction to Statistics",
+    "professor": "Dr. Omar Hassan",
+    "location": "Math Building 105",
+    "days": ["Mon", "Wed", "Fri"],
+    "start": "11:00 AM",
+    "end": "11:50 AM",
+    "semester": "Fall 2025"
+  },
+  {
+    "id": "PHYS121",
+    "name": "General Physics I",
+    "professor": "Dr. Kevin Lee",
+    "location": "Science Center 310",
+    "days": ["Mon", "Wed"],
+    "start": "3:00 PM",
+    "end": "4:15 PM",
+    "semester": "Winter 2026"
+  },
+  {
+    "id": "ENGL101",
+    "name": "College Writing",
+    "professor": "Prof. Amanda Rice",
+    "location": "Liberal Arts 202",
+    "days": ["Tue", "Thu"],
+    "start": "9:30 AM",
+    "end": "10:45 AM",
+    "semester": "Winter 2026"
+  },
+  {
+    "id": "CHEM101",
+    "name": "General Chemistry I",
+    "professor": "Dr. Ryan Mitchell",
+    "location": "Science Center 220",
+    "days": ["Mon", "Wed"],
+    "start": "8:30 AM",
+    "end": "9:45 AM",
+    "semester": "Winter 2026"
+  },
+  {
+    "id": "ECON101",
+    "name": "Principles of Microeconomics",
+    "professor": "Dr. Jessica Reynolds",
+    "location": "Business Hall 204",
+    "days": ["Mon", "Wed", "Fri"],
+    "start": "2:00 PM",
+    "end": "2:50 PM",
+    "semester": "Winter 2026"
+  },
+  {
+    "id": "BIO150",
+    "name": "Principles of Biology",
+    "professor": "Dr. Emily Park",
+    "location": "Life Sciences 121",
+    "days": ["Tue", "Thu"],
+    "start": "12:00 PM",
+    "end": "1:15 PM",
+    "semester": "Spring 2026"
+  },
+  {
+    "id": "HIST205",
+    "name": "World Civilizations",
+    "professor": "Dr. Maria Torres",
+    "location": "History Hall 12",
+    "days": ["Thu"],
+    "start": "11:30 AM",
+    "end": "12:45 PM",
+    "semester": "Spring 2026"
+  },
+  {
+    "id": "ART105",
+    "name": "Introduction to Drawing",
+    "professor": "Prof. Clara Mendoza",
+    "location": "Art Studio 115",
+    "days": ["Fri"],
+    "start": "1:00 PM",
+    "end": "3:30 PM",
+    "semester": "Spring 2026"
+  },
+  {
+    "id": "MUSC120",
+    "name": "Music Appreciation",
+    "professor": "Dr. Nathan Greene",
+    "location": "Performing Arts 303",
+    "days": ["Tue", "Thu"],
+    "start": "3:30 PM",
+    "end": "4:45 PM",
+    "semester": "Spring 2026"
+  },
+  {
+    "id": "SOCI210",
+    "name": "Introduction to Sociology",
+    "professor": "Dr. Tyler Nguyen",
+    "location": "Humanities 305",
+    "days": ["Thu"],
+    "start": "9:00 AM",
+    "end": "11:30 AM",
+    "semester": "Spring 2026"
+  }
+]
