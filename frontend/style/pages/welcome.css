@@ -1,0 +1,123 @@
+/* ------------------------------------------------------------------------------------------ */
+/* WELCOME PAGE LAYOUT */
+
+#page-welcome {
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* WELCOME MESSAGE */
+
+.welcome-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+/* Logo Image */
+.welcome-message .material-icons {
+    font-size: 120px;
+    color: var(--color-primary-default);
+}
+
+/* Text */
+.welcome-text {
+    display: flex;
+    flex-direction: column; 
+    gap: 12px;            
+}
+
+.welcome-text .text_1 {
+    margin: 0;
+    font-size: 25px;
+    line-height: 1; 
+    font-weight: 600;
+    color: var(--text-accent);
+}
+
+.welcome-text .text_2 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1;  
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* CHAT TEXTBOX UI */
+
+#page-welcome .chat-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+    padding: 16px;
+    background: var(--background-default);
+    border-radius: 16px;
+    border: 1px solid var(--divider-default);
+    box-shadow: var(--shadow-md);
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* SUGGESTED PROMPTS */
+
+#page-welcome .suggested-prompts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 650px;
+    justify-content: center;
+}
+
+/* Buttons */
+#page-welcome .suggested-prompts .suggested-btn {
+    flex: 1 1 calc(50% - 8px);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+    border: 1px solid var(--border-default);
+    border-radius: 12px;
+    padding: 12px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    color: var(--text-primary);
+    text-align: left;
+}
+
+/* Icons */
+#page-welcome .suggested-prompts .icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secondary);
+}
+
+#page-welcome .suggested-prompts .icon-box .material-icons {
+    font-size: 22px;
+    color: var(--text-on-primary);
+}
+
+/* Button Interactions */
+#page-welcome .suggested-prompts .suggested-btn:hover {
+    border-color: var(--color-accent-default);
+    background: color-mix(in srgb, var(--color-accent-default) 2%, transparent);
+    box-shadow: var(--shadow-glow);
+}
+
+

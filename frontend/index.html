@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AI Powered Schedule</title>
+    <link rel="icon" type="image/png" href="assets/icons/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="style/base.css" />
+  </head>
+
+  <body>
+    <!-- AUTHENTICATION -->
+    <div id="auth">
+      <div class="auth-container">
+        <!-- LOGO -->
+        <div class="auth-logo">
+          <span class="material-icons">edit_calendar</span>
+          <h2>AI Powered Schedule</h2>
+        </div>
+
+        <!-- CREATE ACCOUNT -->
+        <section class="auth-section" id="auth-signup">
+          <!-- SECTION TITLE -->
+          <span class="auth-title" id="auth-title">Create your account</span>
+
+          <!-- ERROR MESSAGE -->
+          <div class="auth-error hidden" id="signup-error">
+            <span class="material-icons">error_outline</span>
+            <span class="auth-error-text"></span>
+          </div>
+
+          <!-- SECTION CONTENT -->
+          <form id="create-form">
+            <!-- NAME FIELD -->
+            <div class="name-field">
+              <!-- FIRST NAME -->
+              <label class="form-label">
+                First Name
+                <input type="text" id="signup-firstname" required />
+              </label>
+
+              <!-- LAST NAME -->
+              <label class="form-label">
+                Last Name
+                <input type="text" id="signup-lastname" required />
+              </label>
+            </div>
+
+            <!-- EMAIL FEILD -->
+            <label class="form-label">
+              Email
+              <input type="email" id="signup-email" required />
+            </label>
+
+            <!-- PASSWORD FEILD -->
+            <label class="form-label">
+              Password
+              <div class="password-field">
+                <input
+                  type="password"
+                  class="password-input"
+                  id="signup-password"
+                  required
+                />
+                <button
+                  type="button"
+                  class="password-toggle"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                >
+                  <span class="material-icons">visibility_off</span>
+                </button>
+              </div>
+            </label>
+
+            <!-- MAJOR FIELD -->
+            <label class="form-label">
+              Major
+              <select id="signup-major" required>
+                <option value="">Select your major</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Business Administration">
+                  Business Administration
+                </option>
+                <option value="Psychology">Psychology</option>
+                <option value="Biology">Biology</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Physics">Physics</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="English">English</option>
+                <option value="History">History</option>
+                <option value="Political Science">Political Science</option>
+                <option value="Economics">Economics</option>
+                <option value="Sociology">Sociology</option>
+                <option value="Communication">Communication</option>
+                <option value="Art">Art</option>
+                <option value="Music">Music</option>
+                <option value="Nursing">Nursing</option>
+                <option value="Education">Education</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+
+            <!-- MINOR FIELD -->
+            <label class="form-label">
+              Minor (Optional)
+              <select id="signup-minor">
+                <option value="">None</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Business Administration">
+                  Business Administration
+                </option>
+                <option value="Psychology">Psychology</option>
+                <option value="Biology">Biology</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Physics">Physics</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="English">English</option>
+                <option value="History">History</option>
+                <option value="Political Science">Political Science</option>
+                <option value="Economics">Economics</option>
+                <option value="Sociology">Sociology</option>
+                <option value="Communication">Communication</option>
+                <option value="Art">Art</option>
+                <option value="Music">Music</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Statistics">Statistics</option>
+                <option value="Philosophy">Philosophy</option>
+              </select>
+            </label>
+
+            <!-- CREATE ACCOUNT BUTTON -->
+            <button type="submit" class="auth-btn">Create Account</button>
+
+            <!-- LOGIN PAGE SWITCH BUTTON -->
+            <p class="auth-helper">
+              Already have an account?
+              <button
+                type="button"
+                class="auth-inline-link"
+                data-switch="login"
+              >
+                Log in
+              </button>
+            </p>
+          </form>
+        </section>
+
+        <!-- LOGIN -->
+        <section class="auth-section active" id="auth-login">
+          <!-- SECTION TITLE -->
+          <span class="auth-title" id="auth-title">Welcome back</span>
+
+          <!-- ERROR MESSAGE -->
+          <div class="auth-error hidden" id="login-error">
+            <span class="material-icons">error_outline</span>
+            <span class="auth-error-text"></span>
+          </div>
+
+          <!-- SECTION CONTENT -->
+          <form id="login-form">
+            <!-- EMAIL FEILD -->
+            <label class="form-label">
+              Email
+              <input type="email" required />
+            </label>
+
+            <!-- PASSWORD FEILD -->
+            <label class="form-label">
+              Password
+              <div class="password-field">
+                <input
+                  type="password"
+                  class="password-input"
+                  id="login-password"
+                  required
+                />
+                <button
+                  type="button"
+                  class="password-toggle"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                >
+                  <span class="material-icons">visibility_off</span>
+                </button>
+              </div>
+            </label>
+
+            <!-- LOG IN BUTTON -->
+            <button type="submit" class="auth-btn">Log In</button>
+
+            <!-- CREATE ACCOUNT PAGE SWITCH BUTTON -->
+            <p class="auth-helper">
+              Don't have an account?
+              <button
+                type="button"
+                class="auth-inline-link"
+                data-switch="signup"
+              >
+                Sign Up
+              </button>
+            </p>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <!-- FULL APP CONTENT -->
+    <div class="content hidden" id="app-content">
+      <!-- SIDEBAR -->
+      <div class="sidebar" id="sidebar">
+        <!-- APP TITLE -->
+        <div class="app-title">
+          <span class="material-icons">edit_calendar</span>
+          <h2>AI Powered Schedule</h2>
+        </div>
+
+        <hr class="sidebar-divider" />
+
+        <!-- NAVIGATION BAR -->
+        <div class="navbar">
+          <!-- SIDEBAR TITLE -->
+          <p class="sidebar-title">Main</p>
+
+          <!-- NEW CHAT BUTTON -->
+          <button
+            class="nav-item active"
+            data-page="page-chat"
+            data-title="New Chat"
+          >
+            <span class="material-icons">chat_bubble</span>
+            <span>New Chat</span>
+          </button>
+
+          <!-- SCHEDULE BUTTON -->
+          <button
+            class="nav-item"
+            data-page="page-schedule"
+            data-title="Weekly Schedule"
+          >
+            <span class="material-icons">calendar_today</span>
+            <span>Schedule</span>
+          </button>
+
+          <!-- TASKS BUTTON (NEW) -->
+          <button
+            class="nav-item"
+            data-page="page-tasks"
+            data-title="Tasks"
+          >
+            <span class="material-icons">checklist</span>
+            <span>Tasks</span>
+          </button>
+        </div>
+
+        <hr class="sidebar-divider" />
+
+        <!-- CHAT HISTORY -->
+        <div class="chat-history">
+          <!-- SIDEBAR TITLE -->
+          <p class="sidebar-title">Chat History</p>
+
+          <!-- CHAT HISTORY LIST (filled by JS) -->
+          <div class="chat-history-list"></div>
+        </div>
+
+        <hr class="sidebar-divider" />
+
+        <!-- USER PROFILE BUTTON -->
+        <div class="user-profile">
+          <!-- PROFILE BUTTON -->
+          <button class="profile-btn" id="profile-btn">
+            <span class="profile-img">JD</span>
+
+            <div class="profile-info">
+              <p class="profile-name">Jane Doe</p>
+              <p class="profile-username">doej0123</p>
+            </div>
+          </button>
+
+          <!-- PROFILE MENU -->
+          <div class="profile-menu" id="profile-menu">
+            <button
+              class="profile-menu-item"
+              data-page="page-profile"
+              data-title="My Profile"
+            >
+              Profile
+            </button>
+            <button class="profile-menu-item">Sign Out</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content" id="main-content">
+        <!-- TOP BAR -->
+        <div class="topbar">
+          <h1 class="topbar-title" id="topbar-title"></h1>
+        </div>
+
+        <!-- WELCOME PAGE -->
+        <section id="page-welcome" class="page active">
+          <!-- WELCOME MESSAGE -->
+          <div class="welcome-message">
+            <span class="material-icons">edit_calendar</span>
+
+            <div class="welcome-text">
+              <span class="text_1">Hello, Jane!</span>
+              <span class="text_2">How can I help you?</span>
+            </div>
+          </div>
+
+          <!-- CHAT INPUT -->
+          <div class="chat-input">
+            <!-- INPUT BOX -->
+            <input type="text" placeholder="Ask anything..." />
+
+            <!-- MIC BUTTON -->
+            <button class="mic">
+              <span class="material-icons">mic</span>
+            </button>
+
+            <!-- SEND BUTTON -->
+            <button class="send">
+              <span class="material-icons">send</span>
+            </button>
+          </div>
+
+          <!-- SUGGESTED PROMPTS -->
+          <div class="suggested-prompts" id="suggested-prompts"></div>
+        </section>
+
+        <!-- CHAT PAGE -->
+        <section id="page-chat" class="page">
+          <!-- CHAT MESSAGES (filled by JS)-->
+          <div class="chat-body">
+            <div class="chat-messages" id="chat-messages"></div>
+          </div>
+
+          <!-- SUGGESTED PROMPTS -->
+          <div class="suggested-prompts" id="chat-suggested-prompts"></div>
+
+          <!-- CHAT INPUT -->
+          <div class="chat-input">
+            <!-- INPUT BOX -->
+            <input type="text" placeholder="Ask a question..." />
+
+            <!-- MIC BUTTON -->
+            <button class="mic">
+              <span class="material-icons">mic</span>
+            </button>
+
+            <!-- SEND BUTTON -->
+            <button class="send">
+              <span class="material-icons">send</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SCHEDULE PAGE -->
+        <section id="page-schedule" class="page">
+          <!-- ACTION BAR -->
+          <div class="actionbar">
+            <!-- SEMESTER FILTER BUTTON -->
+            <button class="semester-btn" id="semester-btn">
+              <span>Semester</span>
+              <span class="material-icons">expand_more</span>
+            </button>
+
+            <!-- SEMESTER MENU -->
+            <div class="semester-menu" id="semester-menu">
+              <button class="semester-menu-item">Fall 2025</button>
+              <button class="semester-menu-item">Winter 2026</button>
+              <button class="semester-menu-item">Spring 2026</button>
+            </div>
+
+            <!-- ADD CLASS BUTTON -->
+            <button class="add-btn">
+              <span class="material-icons">add</span>
+              <span>Add Course</span>
+            </button>
+          </div>
+
+          <!-- CALENDAR (filled by JS)-->
+          <div class="calendar">
+            <div class="calendar-container">
+              <div class="calendar-grid" id="calendar-grid"></div>
+            </div>
+          </div>
+
+          <!-- COURSES -->
+          <div class="courses">
+            <div class="courses-container">
+              <!-- COURSES MAIN TITLE -->
+              <h1 class="courses-title" id="courses-title">Courses</h1>
+
+              <!-- COURSES LIST (filled by JS) -->
+              <div class="courses-list" id="courses-list"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TASKS PAGE -->
+<section id="page-tasks" class="page">
+  <div class="tasks-layout">
+    <div class="tasks-header-row">
+      <div>
+        <h2 class="tasks-title">Tasks</h2>
+        <p class="tasks-subtitle">
+          View homework, classwork, and assessments tied to your classes.
+        </p>
+      </div>
+    </div>
+
+    <!-- EMPTY STATE -->
+    <div id="tasks-empty" class="tasks-empty">
+      No tasks yet. Add a course to see its assignments.
+    </div>
+
+    <!-- TASK LIST -->
+    <div id="tasks-list" class="tasks-list"></div>
+  </div>
+</section>
+
+        <!-- PROFILE PAGE -->
+        <section id="page-profile" class="page">
+          <div class="profile-layout">
+            <main class="profile-main">
+              <!-- MAIN PROFILE CARD -->
+              <div class="profile-card profile-card-main">
+                <div class="profile-header">
+                  <div class="profile-avatar" id="profile-avatar">??</div>
+                  <div class="profile-text">
+                    <div class="profile-name-row">
+                      <h3 class="profile-name" id="profile-name">Loading...</h3>
+                      <button
+                        type="button"
+                        class="profile-edit-btn"
+                        data-edit="name"
+                        aria-label="Edit name"
+                      >
+                        <span class="material-icons">edit</span>
+                      </button>
+                    </div>
+                    <div class="profile-label">Student ID</div>
+                    <div class="profile-value" id="profile-student-id">N/A</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ACCOUNT CARD -->
+              <div class="profile-card">
+                <div class="profile-section-title">Account</div>
+                <div class="profile-grid">
+                  <div>
+                    <div class="profile-label">Email</div>
+                    <div class="profile-value-row">
+                      <div class="profile-value" id="profile-email">
+                        Loading...
+                      </div>
+                      <button
+                        type="button"
+                        class="profile-edit-btn"
+                        data-edit="email"
+                        aria-label="Edit email"
+                      >
+                        <span class="material-icons">edit</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="profile-label">Password</div>
+                    <div class="profile-password-container">
+                      <span class="profile-value" id="profile-password"
+                        >********</span
+                      >
+                      <button
+                        type="button"
+                        class="profile-password-toggle"
+                        aria-label="Show password"
+                        aria-pressed="false"
+                      >
+                        <span class="material-icons">visibility_off</span>
+                      </button>
+                      <button
+                        type="button"
+                        class="profile-edit-btn"
+                        data-edit="password"
+                        aria-label="Edit password"
+                      >
+                        <span class="material-icons">edit</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CLASS INFORMATION CARD -->
+              <div class="profile-card">
+                <div class="profile-section-title">Class Information</div>
+                <div class="profile-grid">
+                  <div>
+                    <div class="profile-label">Major</div>
+                    <div class="profile-value-row">
+                      <div class="profile-value" id="profile-major">N/A</div>
+                      <button
+                        type="button"
+                        class="profile-edit-btn"
+                        data-edit="major"
+                        aria-label="Edit major"
+                      >
+                        <span class="material-icons">edit</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="profile-label">Minor</div>
+                    <div class="profile-value-row">
+                      <div class="profile-value" id="profile-minor">N/A</div>
+                      <button
+                        type="button"
+                        class="profile-edit-btn"
+                        data-edit="minor"
+                        aria-label="Edit minor"
+                      >
+                        <span class="material-icons">edit</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="profile-classes">
+                  <div class="profile-label">Classes Taken</div>
+                  <div class="profile-pill-row" id="profile-classes">
+                    <!-- Pills added dynamically -->
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </section>
+
+        <!-- EDIT PROFILE MODAL -->
+        <div id="edit-profile-modal" class="modal-hidden">
+          <div class="modal-backdrop">
+            <div
+              class="modal-dialog"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="edit-profile-title"
+            >
+              <!-- MODAL HEADER -->
+              <div class="modal-header">
+                <h2 id="edit-profile-title">Edit Profile</h2>
+                <button
+                  type="button"
+                  class="modal-close-btn"
+                  id="edit-profile-close"
+                >
+                  <span class="material-icons">close</span>
+                </button>
+              </div>
+
+              <!-- MODAL CONTENT -->
+              <div class="modal-content">
+                <form id="edit-profile-form">
+                  <label
+                    for="edit-profile-input"
+                    class="modal-label"
+                    id="edit-profile-label"
+                  >
+                    Field
+                  </label>
+                  <input
+                    id="edit-profile-input"
+                    type="text"
+                    autocomplete="off"
+                    required
+                  />
+
+                  <select
+                    id="edit-profile-select"
+                    class="modal-hidden"
+                    required
+                  >
+                    <!-- Options will be populated dynamically -->
+                  </select>
+                </form>
+              </div>
+
+              <!-- FOOTER BUTTONS -->
+              <div class="modal-actions">
+                <button
+                  type="button"
+                  class="modal-btn modal-btn-secondary"
+                  id="edit-profile-cancel"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  class="modal-btn modal-btn-primary"
+                  id="edit-profile-submit"
+                  form="edit-profile-form"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDIT DROPDOWN MODAL (for major and minor) -->
+        <div id="edit-dropdown-modal" class="modal-hidden">
+          <div class="modal-backdrop">
+            <div
+              class="modal-dialog"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="edit-dropdown-title"
+            >
+              <!-- MODAL HEADER -->
+              <div class="modal-header">
+                <h2 id="edit-dropdown-title">Edit Field</h2>
+                <button
+                  type="button"
+                  class="modal-close-btn"
+                  id="edit-dropdown-close"
+                >
+                  <span class="material-icons">close</span>
+                </button>
+              </div>
+
+              <!-- MODAL CONTENT -->
+              <div class="modal-content">
+                <form id="edit-dropdown-form">
+                  <label
+                    for="edit-dropdown-select"
+                    class="modal-label"
+                    id="edit-dropdown-label"
+                  >
+                    Field
+                  </label>
+                  <select id="edit-dropdown-select" required>
+                    <!-- Options populated by JS -->
+                  </select>
+                </form>
+              </div>
+
+              <!-- FOOTER BUTTONS -->
+              <div class="modal-actions">
+                <button
+                  type="button"
+                  class="modal-btn modal-btn-secondary"
+                  id="edit-dropdown-cancel"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  class="modal-btn modal-btn-primary"
+                  id="edit-dropdown-submit"
+                  form="edit-dropdown-form"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD COURSE MODAL -->
+    <div id="add-course-modal" class="modal-hidden">
+      <!-- MODAL BACKDROP -->
+      <div class="modal-backdrop">
+        <!-- MODAL CARD -->
+        <div
+          class="modal-dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="add-course-title"
+        >
+          <!-- MODAL HEADER -->
+          <div class="modal-header">
+            <!-- MODAL TITLE -->
+            <h2 id="add-course-title">Add Course</h2>
+
+            <!-- CLOSE BUTTON -->
+            <button type="button" class="modal-close-btn" id="add-course-close">
+              <span class="material-icons">close</span>
+            </button>
+          </div>
+
+          <!-- MODAL CONTENT -->
+          <div class="modal-content">
+            <p class="modal-subtitle">
+              Enter the course ID you want to add to your schedule.
+            </p>
+
+            <form id="add-course-form">
+              <label for="modal-course-id" class="modal-label">
+                Course ID
+                <input
+                  id="modal-course-id"
+                  type="text"
+                  placeholder="e.g. ENGR110"
+                  autocomplete="off"
+                  required
+                />
+
+                <p id="add-course-error" class="modal-field-error hidden">
+                  <span class="material-icons field-error-icon"
+                    >error_outline</span
+                  >
+                  <span class="modal-field-error-text"
+                    >Could not find course</span
+                  >
+                </p>
+              </label>
+            </form>
+          </div>
+
+          <!-- FOOTER BUTTONS -->
+          <div class="modal-actions">
+            <!-- SECONDARY BUTTON -->
+            <button
+              type="button"
+              class="modal-btn modal-btn-secondary"
+              id="add-course-cancel"
+            >
+              Cancel
+            </button>
+
+            <!-- PRIMARY BUTTOn-->
+            <button
+              type="submit"
+              class="modal-btn modal-btn-primary"
+              id="add-course-submit"
+              form="add-course-form"
+              disabled
+            >
+              Add Course
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DROP COURSE MODAL -->
+    <div id="drop-course-modal" class="modal-hidden">
+      <!-- MODAL BACKDROP -->
+      <div class="modal-backdrop">
+        <!-- MODAL CARD -->
+        <div
+          class="modal-dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="drop-course-title"
+        >
+          <!-- MODAL HEADER -->
+          <div class="modal-header">
+            <!-- MODAL TITLE -->
+            <h2 id="drop-course-title">Drop Course?</h2>
+
+            <!-- CLOSE BUTTON -->
+            <button
+              type="button"
+              class="modal-close-btn"
+              id="drop-course-close"
+            >
+              <span class="material-icons">close</span>
+            </button>
+          </div>
+
+          <!-- MODAL CONTENT -->
+          <div class="modal-content">
+            <p class="modal-subtitle" id="drop-course-message"></p>
+          </div>
+
+          <!-- FOOTER BUTTONS -->
+          <div class="modal-actions">
+            <!-- SECONDARY BUTTON -->
+            <button
+              type="button"
+              class="modal-btn modal-btn-secondary"
+              id="drop-course-cancel"
+            >
+              Cancel
+            </button>
+
+            <!-- PRIMARY BUTTON -->
+            <button
+              type="button"
+              class="modal-btn modal-btn-primary"
+              id="drop-course-confirm"
+            >
+              Drop
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DELETE CONVERSATION MODAL -->
+    <div id="delete-convo-modal" class="modal-hidden">
+      <!-- MODAL BACKDROP -->
+      <div class="modal-backdrop">
+        <!-- MODAL CARD -->
+        <div
+          class="modal-dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="delete-convo-title"
+        >
+          <!-- MODAL HEADER -->
+          <div class="modal-header">
+            <!-- MODAL TITLE -->
+            <h2 id="delete-convo-title">Delete Conversation?</h2>
+
+            <!-- CLOSE BUTTON -->
+            <button
+              type="button"
+              class="modal-close-btn"
+              id="delete-convo-close"
+            >
+              <span class="material-icons">close</span>
+            </button>
+          </div>
+
+          <!-- MODAL CONTENT -->
+          <div class="modal-content">
+            <p class="modal-subtitle" id="delete-convo-message"></p>
+          </div>
+
+          <!-- FOOTER BUTTONS -->
+          <div class="modal-actions">
+            <!-- SECONDARY BUTTON -->
+            <button
+              type="button"
+              class="modal-btn modal-btn-secondary"
+              id="delete-convo-cancel"
+            >
+              Cancel
+            </button>
+
+            <!-- PRIMARY BUTTON -->
+            <button
+              type="button"
+              class="modal-btn modal-btn-primary"
+              id="delete-convo-confirm"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="src/script.js"></script>
+    <script>
+      // Simple tab switching for profiles
+      const profileTabs = document.querySelectorAll(
+        "#page-profile .profile-tab"
+      );
+      const profilePersons = document.querySelectorAll(
+        "#page-profile .profile-person"
+      );
+
+      profileTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const person = tab.dataset.person;
+          if (!person) return;
+
+          // highlight tab
+          profileTabs.forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+
+          // show correct person
+          profilePersons.forEach((block) => {
+            block.classList.remove("active");
+          });
+          const target = document.getElementById("profile-person-" + person);
+          if (target) {
+            target.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

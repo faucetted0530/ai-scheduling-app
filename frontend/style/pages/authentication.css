@@ -1,0 +1,264 @@
+/* ------------------------------------------------------------------------------------------ */
+/* AUTHENTICATION PAGE LAYOUT */
+
+#auth {
+  width: 100vw;
+  height: 100vh;
+  background: var(--background-main);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.063);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 24px;
+}
+
+.auth-container {
+  width: 500px;
+  border-radius: 16px;
+  background: var(--background-default);
+  border: 1px solid var(--divider-default);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 16px 24px;
+}
+
+.content.hidden {
+  display: none;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* LOGO */
+
+.auth-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Icon */
+.auth-logo span.material-icons {
+  font-size: 24px;
+  color: var(--color-primary-default);
+}
+
+/* Text */
+.auth-logo h2 {
+  margin: 16px 0px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-primary-default);
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* SECTION CONTENT LAYOUT */
+
+.auth-section {
+  display: none;
+}
+
+.auth-section.active {
+  display: block;
+}
+
+/* Title */
+.auth-title {
+  width: 100%;
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* ERROR MESSAGE */
+
+.auth-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  background: var(--danger-bg);
+  border: 1px solid var(--danger-border);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--danger-text);
+  line-height: 1.4;
+}
+
+.auth-error .material-icons {
+  font-size: 20px;
+  color: var(--danger-default);
+  flex-shrink: 0;
+}
+
+.auth-error-text {
+  flex: 1;
+}
+
+.auth-error.hidden {
+  display: none;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* FORM FIELD */
+
+/* Label */
+.form-label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--text-secondary) 80%, transparent);
+}
+
+/* Input Box */
+.form-label input,
+.form-label select {
+  width: 100%;
+  height: 40px;
+  margin-top: 4px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--divider-default);
+  background: color-mix(in srgb, var(--color-accent-strong) 10%, #ffffff);
+  color: var(--text-primary);
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-label select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239D6EDE' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+.form-label select option {
+  background: white;
+  color: var(--text-primary);
+  padding: 8px;
+}
+
+.form-label select option:first-child {
+  color: color-mix(in srgb, var(--text-secondary) 70%, transparent);
+}
+
+.form-label select:focus,
+.form-label input:focus {
+  outline: none;
+  border-color: var(--color-primary-default);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--color-primary-default) 10%, transparent);
+}
+
+.form-label select:hover {
+  border-color: var(--color-secondary);
+}
+
+/* Name Field */
+.name-field {
+  display: flex;
+  gap: 12px;
+}
+
+.name-field .form-label {
+  flex: 1;
+}
+
+/* Password Field */
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 40px;
+}
+
+/* Password Field Icon */
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 53%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: color-mix(in srgb, var(--text-secondary) 80%, transparent);
+}
+
+/* Password Button Interaction */
+.password-toggle:hover {
+  color: var(--color-primary-hover);
+}
+
+.password-toggle .material-icons {
+  font-size: 20px;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* PRIMARY BUTTON */
+
+.auth-btn {
+  margin: 24px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  width: 100%;
+  height: 40px;
+  background: var(--color-primary-default);
+  color: var(--text-on-primary);
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+/* Button Interaction */
+.auth-btn:hover {
+  background: var(--color-primary-hover);
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* HELPER BUTTON */
+
+/* Text */
+.auth-helper {
+  font-size: 14px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* Button */
+.auth-inline-link {
+  border: none;
+  background: none;
+  color: var(--text-accent);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+/* Button Interaction */
+.auth-inline-link:hover {
+  color: var(--color-primary-hover);
+}

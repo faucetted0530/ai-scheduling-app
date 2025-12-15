@@ -1,0 +1,477 @@
+/* ------------------------------------------------------------------------------------------ */
+/* SCHEDULE PAGE LAYOUT */
+
+#page-schedule {
+  position: relative;
+  overflow: hidden;
+  padding: 0 24px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* ACTION BAR LAYOUT */
+
+.actionbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* SEMESTER FILTER BUTTON */
+
+.semester-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  height: 40px;
+  background: none;
+  color: var(--color-primary-default);
+  border: 1px solid var(--color-primary-default);
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+/* Icon */
+.semester-btn .material-icons {
+  font-size: 18px;
+  color: var(--color-primary-default);
+}
+
+/* Button Interaction */
+.semester-btn:hover {
+  background: color-mix(in srgb, var(--color-primary-hover) 10%, transparent);
+  border-color: var(--color-primary-hover);
+}
+
+/* Menu Layout */
+.semester-menu {
+  position: absolute;
+  margin-top: 8px;
+  top: 56px;
+  left: 24px;
+  background: var(--background-default);
+  border: 1px solid var(--divider-default);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  padding: 8px;
+  width: 160px;
+  display: none;
+  flex-direction: column;
+  z-index: 10;
+  gap: 4px;
+}
+
+.semester-menu.open {
+  display: block;
+}
+
+/* Menu Item */
+.semester-menu-item {
+  width: 100%;
+  padding: 8px 14px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 14px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+/* Button Interaction */
+.semester-menu-item:hover {
+  background: color-mix(in srgb, var(--color-secondary) 10%, transparent);
+}
+
+.semester-menu-item.active {
+  background: color-mix(in srgb, var(--color-accent-default) 20%, transparent);
+  color: var(--text-accent);
+  font-weight: 600;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* ADD CLASS BUTTON */
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  height: 40px;
+  background: var(--color-primary-default);
+  color: var(--text-on-primary);
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+/* Icon */
+.add-btn .material-icons {
+  font-size: 18px;
+  color: var(--text-on-primary);
+}
+
+/* Button Interaction */
+.add-btn:hover {
+  background: var(--color-primary-hover);
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* CALENDAR */
+
+.calendar {
+  flex: 1;
+  min-height: 0;
+}
+
+.calendar-container {
+  flex: 1;
+  height: 100%;
+  border-radius: 16px;
+  background: var(--background-default);
+  border: 1px solid var(--divider-default);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+}
+
+.calendar-grid {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* Day header row */
+.calendar-header {
+  display: grid;
+  grid-template-columns: 80px repeat(7, 1fr);
+  background: color-mix(in srgb, var(--color-tertiary) 15%, #ffffff);
+  border-bottom: 1px solid var(--border-default);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.day-cell {
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-right: 1px solid var(--divider-default);
+}
+
+.day-cell:last-child {
+  border-right: none;
+}
+
+.corner-cell {
+  border-right: 1px solid var(--divider-default);
+}
+
+/* Time column */
+.time-cell {
+  text-align: center;
+  align-content: center;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  border-right: 1px solid var(--divider-default);
+  background: color-mix(in srgb, var(--color-accent-strong) 10%, #ffffff);
+}
+
+/* Rows */
+.time-row {
+  display: grid;
+  grid-template-columns: 80px repeat(7, 1fr);
+  height: 100%;
+  min-height: 48px;
+}
+
+.time-row:not(:last-child) {
+  border-bottom: 1px solid var(--divider-default);
+}
+
+.slot-cell {
+  border-right: 1px solid var(--divider-default);
+  padding: 4px 6px;
+  font-size: 12px;
+  color: var(--text-primary-default);
+  position: relative;
+}
+
+.slot-cell:last-child {
+  border-right: none;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* CALENDAR COURSE BLOCKS */
+
+.calendar-course {
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  border-radius: 8px;
+  padding: 3px 5px;
+  font-size: 10px;
+  line-height: 1.2;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-xs);
+  overflow: hidden;
+}
+
+/* Course ID */
+.calendar-course-id {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+/* Course Time */
+.calendar-course-time {
+  font-size: 9px;
+  opacity: 2;
+}
+
+/* Single-Hour Class - Full Pill */
+.calendar-course-single {
+  border-radius: 8px;
+}
+
+/* Top Multi-Hour Block */
+.calendar-course-start {
+  border-radius: 8px 8px 0 0;
+}
+
+/* Middle Multi-Hour Block */
+.calendar-course-middle {
+  border-radius: 0;
+  margin-top: -1px;
+}
+
+/* Bottom Multi-Hour Block */
+.calendar-course-end {
+  border-radius: 0 0 8px 8px;
+  margin-top: -2px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* COURSES */
+
+.courses {
+  padding: 16px 0;
+  height: 250px;
+}
+
+.courses-container {
+  height: 100%;
+  border-radius: 16px;
+  background: var(--background-default);
+  border: 1px solid var(--divider-default);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 16px 24px;
+}
+
+/* Title */
+.courses-title {
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+/* Courses List */
+.courses-list {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* INDIVIDUAL COURSE CARD */
+
+.course-card {
+  background: var(--background-secondary);
+  border: 1px solid var(--divider-default);
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: background 0.2s, border-color 0.2s;
+  flex: 1 1 500px;
+  min-width: 500px;
+  max-width: 530px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+/* Course Color Setup */
+.course-color {
+  width: 8px;
+  height: 105px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* Course Colors */
+.course-color-1  { background: var(--course-color-red); }
+.course-color-2  { background: var(--course-color-orange); }
+.course-color-3  { background: var(--course-color-yellow); }
+.course-color-4  { background: var(--course-color-green); }
+.course-color-5  { background: var(--course-color-blue); }
+.course-color-6  { background: var(--course-color-pink); }
+.course-color-7  { background: var(--course-color-mint); }
+.course-color-8  { background: var(--course-color-gray); }
+.course-color-9  { background: var(--course-color-brown); }
+.course-color-10 { background: var(--course-color-teal); }
+
+/* Course Content */
+.course-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Course header */
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 12px;
+}
+
+/* Course Number */
+.course-number {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+/* Course Name */
+.course-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Course Details */
+.course-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+  width: 400px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Detail Icon */
+.detail-icon {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+/* Detail Text */
+.detail-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.course-professor,
+.course-time,
+.course-day,
+.course-location {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* REMOVE BUTTON */
+
+.course-remove-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Icon */
+.course-remove-btn .material-icons {
+  font-size: 24px;
+  color: var(--danger-default);
+}
+
+/* Button interaction */
+.course-remove-btn:hover {
+  background: var(--danger-bg);
+}
+
+.course-remove-btn:hover .material-icons {
+  color: var(--danger-hover);
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* ADD COURSE MODAL */
+
+#add-course-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* DROP COURSE MODAL  */
+
+#drop-course-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}

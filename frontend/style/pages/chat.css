@@ -1,0 +1,99 @@
+/* ------------------------------------------------------------------------------------------ */
+/* CHAT PAGE LAYOUT */
+
+#page-chat {
+    padding: 16px 24px;
+    gap: 16px;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chat-body {
+    flex: 1;            
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;              
+    gap: 8px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* MESSAGES */
+
+.chat-messages {
+    display: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.chat-message {
+    max-width: 70%;
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: 14px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* User */
+.chat-message.user {
+    align-self: flex-end;
+    background: var(--color-primary-default);
+    color: var(--text-on-primary);
+    border-bottom-right-radius: 4px;
+}
+
+/* AI bot */
+.chat-message.bot {
+    align-self: flex-start;
+    background: var(--color-accent-strong);
+    color: var(--text-primary);
+    border-bottom-left-radius: 4px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* SUGGESTED PROMPTS */
+
+#page-chat .suggested-prompts {
+    display: flex;
+    gap: 8px;
+}
+
+#page-chat .suggested-prompts .suggested-btn {
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+    border: 1px solid var(--color-accent-default);
+    border-radius: 999px;
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+    color: var(--text-accent);
+    text-align: left;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* CHAT TEXTBOX UI */
+
+#page-chat .chat-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    left: 0;
+    right: 0;  
+    bottom: 16px;
+    padding: 16px;
+    background: var(--background-default);
+    border-radius: 16px;
+    border: 1px solid var(--divider-default);
+    box-shadow: var(--shadow-md);
+}

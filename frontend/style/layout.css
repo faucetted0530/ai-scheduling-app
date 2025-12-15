@@ -1,0 +1,320 @@
+/* ------------------------------------------------------------------------------------------ */
+/* SIDEBAR LAYOUT */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 300px;
+  padding: 16px 24px;
+  border-right: 1px solid var(--border-default);
+  background-color: var(--background-default);
+}
+
+.sidebar-divider {
+  border: none;
+  width: 100%;
+  height: 1px;
+  background-color: var(--divider-default);
+  margin: 16px 0;
+}
+
+.sidebar-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--text-secondary) 80%, transparent);
+  margin: 8px 0 8px;
+}
+
+/* App Title */
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-title span.material-icons {
+  font-size: 30px;
+  color: var(--color-primary-default);
+}
+
+.app-title h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: 0.15s ease, color 0.15s ease;
+}
+
+.nav-item:hover {
+  background: color-mix(in srgb, var(--color-secondary) 10%, transparent);
+}
+
+.nav-item.active {
+  background: color-mix(in srgb, var(--color-accent-default) 20%, transparent);
+  color: var(--text-accent);
+  font-weight: 600;
+}
+
+.nav-item .material-icons {
+  font-size: 18px;
+  color: inherit;
+}
+
+/* Chat History */
+.chat-history {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+
+.chat-history-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.history-row:hover {
+  background: color-mix(in srgb, var(--color-secondary) 10%, transparent);
+}
+
+.history-row.active {
+  background: color-mix(in srgb, var(--color-accent-default) 20%, transparent);
+}
+
+.history-label {
+  flex: 1;
+  background: none;
+  border: none;
+  font-size: 13px;
+  text-align: left;
+  color: var(--text-secondary);
+  padding: 0;
+  cursor: inherit;
+}
+
+.history-row.active .history-label {
+  color: var(--text-accent);
+  font-weight: 600;
+}
+
+.delete-history-btn {
+  border: none;
+  background: transparent;
+  padding: 3px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-history-btn .material-icons {
+  font-size: 18px;
+  color: color-mix(in srgb, var(--text-secondary) 70%, transparent);
+}
+
+.history-row:hover .delete-history-btn .material-icons {
+  color: var(--danger-hover);
+}
+
+/* Delete Conversation Modal */
+#delete-convo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+/* Empty Chat History */
+.empty-history {
+  font-size: 12px;
+  color: color-mix(in srgb, var(--text-secondary) 70%, transparent);
+  padding: 4px 2px;
+}
+
+/* User Profile Button */
+.user-profile {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.profile-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: color-mix(
+    in srgb,
+    var(--color-primary-default) 15%,
+    transparent
+  );
+  color: var(--text-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  line-height: 1.2;
+  gap: 2px;
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.profile-username {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  color: color-mix(in srgb, var(--text-secondary) 70%, transparent);
+}
+
+.profile-btn:hover .profile-name,
+.profile-btn:hover .profile-username {
+  color: var(--text-accent);
+}
+
+.profile-menu {
+  position: absolute;
+  bottom: 56px;
+  right: 0;
+  background: var(--background-default);
+  border: 1px solid var(--divider-default);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  padding: 8px;
+  width: 100%;
+  display: none;
+  z-index: 10;
+  gap: 4px;
+}
+
+.profile-menu.open {
+  display: block;
+}
+
+.profile-menu-item {
+  width: 100%;
+  padding: 8px 14px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 14px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.profile-menu-item:hover {
+  background: color-mix(in srgb, var(--color-secondary) 10%, transparent);
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* MAIN CONTENT LAYOUT */
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* TOB BAR LAYOUT */
+
+.topbar {
+  height: 80px;
+  padding: 0;
+  background: var(--background-default);
+  border-bottom: 1px solid var(--border-default);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.topbar.hidden {
+  display: none;
+}
+
+.topbar-title {
+  font-size: 24px;
+  color: var(--text-primary);
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* PAGE LAYOUT */
+
+.page {
+  display: none;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.page.active {
+  display: flex;
+  flex-direction: column;
+}

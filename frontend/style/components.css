@@ -1,0 +1,281 @@
+/* ------------------------------------------------------------------------------------------ */
+/* CHAT TYPE INPUT TEXTBOX */
+
+.chat-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  color: var(--text-primary);
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* CHAT TEXTBOX BUTTONS */
+
+.chat-input .mic,
+.chat-input .send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.material-icons {
+  font-size: 20px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* MIC BUTTON */
+
+/* Icon */
+.chat-input .mic .material-icons {
+  color: var(--text-secondary);
+  font-size: 24px;
+}
+
+/* Button nteraction */
+.chat-input .mic:hover {
+  background: color-mix(in srgb, var(--color-secondary) 10%, transparent);
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* SEND BUTTON  */
+
+/* Icon */
+.chat-input .send {
+  background: var(--color-primary-default);
+  color: var(--text-on-primary);
+}
+
+/* Button interaction */
+.chat-input .send:hover {
+  background: var(--color-primary-hover);
+}
+
+.chat-input .send:active {
+  transform: scale(0.97);
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* CHAT TABLE  */
+
+.chat-message table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 6px;
+}
+
+.chat-message th,
+.chat-message td {
+  border: 1px solid #dcdce6;
+  padding: 6px 8px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.chat-message th {
+  background: #f7f7fb;
+  font-weight: 600;
+}
+
+.chat-message tr:nth-child(even) td {
+  background: color-mix(in srgb, var(--color-accent-strong) 10%, #ffffff);
+}
+
+.chat-message tr:nth-child(odd) td {
+  background: white;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* MODAL  */
+
+.modal-hidden {
+  display: none;
+}
+
+/* Backdrop */
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: var(--modal-background);
+  backdrop-filter: blur(2px) saturate(120%);
+  -webkit-backdrop-filter: blur(2px) saturate(120%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pop-Up */
+.modal-dialog {
+  background: var(--background-default);
+  border-radius: 12px;
+  padding: 24px;
+  width: min(420px, 90vw);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Header */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.modal-header h2 {
+  font-size: 20px;
+  margin: 0px;
+  color: var(--text-primary);
+}
+
+/* Close Button */
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Close Icon */
+.modal-close-btn .material-icons {
+  font-size: 24px;
+  color: var(--text-primary);
+}
+
+/* Close Button Interaction */
+.modal-close-btn:hover {
+  background: var(--color-accent-hover);
+}
+
+.modal-close-btn:hover .material-icons {
+  color: var(--color-primary-hover);
+}
+
+/* Main Content */
+.modal-content {
+  margin: 24px 0;
+}
+
+/* Text */
+.modal-subtitle {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.modal-subtitle strong {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Field Label */
+.modal-label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--text-secondary) 80%, transparent);
+}
+
+/* Field Input Box */
+.modal-label input {
+  width: 100%;
+  height: 40px;
+  margin-top: 4px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border:  1px solid var(--divider-default);
+  background: color-mix(in srgb, var(--color-accent-strong) 10%, #ffffff);
+  color: var(--text-primary);
+}
+
+.modal-field-error {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--danger-text);
+}
+
+.modal-field-error-icon {
+  font-size: 16px;
+  color: var(--danger-default);
+}
+
+.modal-label input.modal-field-input-error {
+  border-color: var(--danger-default);
+  background: color-mix(in srgb, var(--danger-bg) 10%, #ffffff 10%);;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+/* Footer Buttons */
+.modal-btn {
+  padding: 8px 16px;
+  height: 40px;
+  background: none;
+  color: var(--color-primary-default);
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+/* Primary Button */
+.modal-btn-primary {
+  background: var(--color-primary-default);
+  color: var(--text-on-primary);
+}
+
+/* Primary Button Interaction */
+.modal-btn-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.modal-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Secondary Button */
+.modal-btn-secondary {
+  background: none;
+}
+
+/* Secondary Button Interaction */
+.modal-btn-secondary:hover {
+  background: var(--color-accent-hover);
+}

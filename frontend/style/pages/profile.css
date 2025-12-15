@@ -1,0 +1,359 @@
+/* ===== PROFILE PAGE LAYOUT ===== */
+
+#page-profile .profile-layout {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+}
+
+#page-profile .profile-page-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+#page-profile .profile-tab {
+  width: 100%;
+  text-align: left;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+#page-profile .profile-tab:hover {
+  background: #f0f0f0;
+}
+
+#page-profile .profile-tab.active {
+  background: #e6e6ff;
+  font-weight: 600;
+}
+
+#page-profile .profile-main {
+  flex: 1;
+}
+
+/* cards */
+#page-profile .profile-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+#page-profile .profile-card-main {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#page-profile .profile-section-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+/* header row */
+#page-profile .profile-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#page-profile .profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #f3f3f3;
+  border: 3px solid #cfcfcf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+#page-profile .profile-name {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+/* Name row with edit button */
+#page-profile .profile-name-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+#page-profile .profile-name-row .profile-name {
+  margin-bottom: 0;
+}
+
+/* Value row with edit button */
+#page-profile .profile-value-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Edit button */
+#page-profile .profile-edit-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border-radius: 4px;
+  transition: background 0.2s, opacity 0.2s;
+  opacity: 0;
+  flex-shrink: 0;
+}
+
+#page-profile .profile-edit-btn .material-icons {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+/* Show edit button on hover of parent container */
+#page-profile .profile-name-row:hover .profile-edit-btn,
+#page-profile .profile-value-row:hover .profile-edit-btn {
+  opacity: 1;
+}
+
+#page-profile .profile-edit-btn:hover {
+  background: color-mix(in srgb, var(--color-secondary) 15%, transparent);
+}
+
+#page-profile .profile-edit-btn:hover .material-icons {
+  color: var(--color-primary-default);
+}
+
+#page-profile .profile-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #777;
+  margin-bottom: 2px;
+}
+
+#page-profile .profile-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Password toggle container */
+#page-profile .profile-password-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Show password edit button on hover */
+#page-profile .profile-password-container .profile-edit-btn {
+  opacity: 0;
+}
+
+#page-profile .profile-password-container:hover .profile-edit-btn {
+  opacity: 1;
+}
+
+#page-profile .profile-password-toggle {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+#page-profile .profile-password-toggle .material-icons {
+  font-size: 20px;
+  color: color-mix(in srgb, var(--text-secondary) 80%, transparent);
+}
+
+#page-profile .profile-password-toggle:hover {
+  background: color-mix(in srgb, var(--color-secondary) 10%, transparent);
+}
+
+#page-profile .profile-password-toggle:hover .material-icons {
+  color: var(--color-primary-hover);
+}
+
+#page-profile .profile-password-toggle {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+#page-profile .profile-password-toggle .material-icons {
+  font-size: 20px;
+  color: color-mix(in srgb, var(--text-secondary) 80%, transparent);
+}
+
+#page-profile .profile-password-toggle:hover {
+  background: color-mix(in srgb, var(--color-secondary) 10%, transparent);
+}
+
+#page-profile .profile-password-toggle:hover .material-icons {
+  color: var(--color-primary-hover);
+}
+
+/* grids & classes */
+#page-profile .profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+#page-profile .profile-classes {
+  margin-top: 16px;
+}
+
+#page-profile .profile-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+#page-profile .profile-pill {
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-accent-default) 20%, transparent);
+  font-size: 0.8rem;
+}
+
+/* show one person at a time */
+#page-profile .profile-person {
+  display: none;
+}
+
+#page-profile .profile-person.active {
+  display: block;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  #page-profile .profile-layout {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  #page-profile .profile-tab {
+    flex: 1 1 45%;
+  }
+}
+
+/* Edit Profile Modal */
+#edit-profile-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+/* Edit Profile Modal Styles */
+
+#edit-profile-modal .modal-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--text-secondary) 80%, transparent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+#edit-profile-modal #edit-profile-input,
+#edit-profile-modal #edit-profile-select {
+  width: 100%;
+  height: 40px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--divider-default);
+  background: color-mix(in srgb, var(--color-accent-strong) 10%, #ffffff);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+#edit-profile-modal #edit-profile-select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239D6EDE' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+#edit-profile-modal #edit-profile-input::placeholder {
+  color: color-mix(in srgb, var(--text-secondary) 60%, transparent);
+}
+
+#edit-profile-modal #edit-profile-input:focus,
+#edit-profile-modal #edit-profile-select:focus {
+  outline: none;
+  border-color: var(--color-primary-default);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--color-primary-default) 10%, transparent);
+}
+
+#edit-profile-modal #edit-profile-select:hover {
+  border-color: var(--color-secondary);
+}
+#edit-profile-form {
+  margin-top: -15px;
+}
+
+/* DROPDOWN SELECT ONLY */
+#edit-dropdown-select {
+  width: 100%;
+  height: 40px;
+  padding: 9px 10px;
+  padding-right: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--divider-default);
+  background: color-mix(in srgb, var(--color-accent-strong) 10%, #ffffff);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239D6EDE' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+#edit-dropdown-select:hover {
+  border-color: var(--color-secondary);
+}
+
+#edit-dropdown-select:focus {
+  outline: none;
+  border-color: var(--color-primary-default);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--color-primary-default) 10%, transparent);
+}
