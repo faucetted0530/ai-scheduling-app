@@ -40,6 +40,12 @@ A short demonstration video is included showing:
 - Dynamic schedule updates
 
 ---
+## 🔒 Environment Configuration
+
+Environment configuration files (such as `.env` or similar) are intentionally not included in this repository for security and implementation purposes.  
+These files may contain sensitive credentials or local configuration details and are excluded to ensure safe and portable code sharing.
+
+---
 
 ## 👤 Author
 
